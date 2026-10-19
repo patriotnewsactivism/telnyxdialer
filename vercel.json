@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "backend/server.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/backend/server.js" }
+  ],
+  "env": {
+    "TELNYX_API_KEY": "@telnyx-api-key",
+    "TELNYX_CONNECTION_ID": "@telnyx-connection-id",
+    "TELNYX_FROM_NUMBER": "@telnyx-from-number",
+    "TELNYX_WEBHOOK_URL": "@telnyx-webhook-url",
+    "TELNYX_TTS_VOICE": "@telnyx-tts-voice",
+    "TELNYX_TTS_LANGUAGE": "@telnyx-tts-language",
+    "ELEVENLABS_API_KEY": "@elevenlabs-api-key",
+    "ELEVENLABS_VOICE_ID": "@elevenlabs-voice-id",
+    "CARTESIA_API_KEY": "@cartesia-api-key",
+    "CARTESIA_VOICE_ID": "@cartesia-voice-id",
+    "OPENROUTER_API_KEY": "@openrouter-api-key",
+    "OPENROUTER_MODEL": "@openrouter-model",
+    "SMTP_HOST": "@smtp-host",
+    "SMTP_PORT": "@smtp-port",
+    "SMTP_USER": "@smtp-user",
+    "SMTP_PASS": "@smtp-pass",
+    "SMTP_FROM": "@smtp-from",
+    "TAKEOVER_NUMBER": "@takeover-number",
+    "BASE_URL": "@base-url",
+    "PORT": "3000",
+    "HOST": "0.0.0.0"
+  }
+}

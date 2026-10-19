@@ -39,10 +39,12 @@ app.use((err, _req, res, _next) => {
   res.status(err.status || 500).json({ error: err.message || 'internal server error' });
 });
 
-const server = app.listen(PORT, '0.0.0.0', () => {
-  console.log(`telnyx-dialer listening on http://0.0.0.0:${PORT}  (PWA at /)`);
-  console.log(`  Telnyx configured: ${!!process.env.TELNYX_API_KEY}`);
-  console.log(`  Webhook URL for Telnyx console: ${BASE_URL}/api/webhooks/telnyx`);
-});
+if (require.main === module) {
+  const server = app.listen(PORT, '0.0.0.0', () => {
+    console.log(`telnyx-dialer listening on http://0.0.0.0:${PORT}  (PWA at /)`);
+    console.log(`  Telnyx configured: ${!!process.env.TELNYX_API_KEY}`);
+    console.log(`  Webhook URL for Telnyx console: ${BASE_URL}/api/webhooks/telnyx`);
+  });
+}
 
-module.exports = { app, server };
+module.exports = app;
