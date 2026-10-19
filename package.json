@@ -4,6 +4,7 @@
   "description": "AI outbound dialing system on Telnyx: progressive campaigns, AI notetaker, voicemail detection, SMS, email, takeover, skip trace, installable PWA",
   "main": "backend/server.js",
   "scripts": {
+    "build": "echo \"No build step needed — @vercel/node serves backend/server.js\"",
     "start": "node backend/server.js",
     "dev": "node backend/server.js",
     "test": "node backend/test_modules.js",
