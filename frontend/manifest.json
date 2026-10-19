@@ -1,0 +1,23 @@
+{
+  "name": "Telnyx AI Dialer",
+  "short_name": "AI Dialer",
+  "description": "AI outbound dialing system on Telnyx: progressive campaigns, AI notetaker, voicemail detection, SMS, email, takeover, skip trace.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "id": "/",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "communication", "productivity"],
+  "icons": [
+    { "src": "/icons/icon-48.png", "sizes": "48x48", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Quick Dial", "url": "/#dialer", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Campaigns", "url": "/#campaigns", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "telnyx-dialer",
+  "version": "1.0.0",
+  "description": "AI outbound dialing system on Telnyx: progressive campaigns, AI notetaker, voicemail detection, SMS, email, takeover, skip trace, installable PWA",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "test": "node backend/test_modules.js",
+    "lint": "node --check backend/server.js && node --check backend/services/telnyx.js && node --check backend/services/campaign.js && node --check backend/services/notetaker.js && node --check backend/services/voicemail.js && node --check backend/routes/telnyx.js && node --check backend/routes/campaigns.js && node --check backend/routes/notetaker.js && node --check backend/routes/webhooks.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.13",
+    "undici": "^6.11.1",
+    "ws": "^8.17.1"
+  },
+  "engines": { "node": ">=20" }
+}
